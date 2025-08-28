@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust - Travel Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cookie Notification -->
+    <div id="cookie-notification" class="cookie-notification">
+      <p>
+        We use cookies to enhance your experience. By continuing to visit this
+        site you agree to our use of cookies.
+      </p>
+      <button id="accept-cookies" class="btn btn-primary">Accept</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1>Wanderlust</h1>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#destinations" class="nav-link">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#blog" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Amazing Places</h1>
+        <p class="hero-subtitle">
+          Explore the world with our travel guides and stories
+        </p>
+        <button class="btn btn-primary hero-btn">Start Exploring</button>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop&q=80"
+          alt="Travel"
+        />
+      </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+      <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="europe">Europe</button>
+          <button class="filter-btn" data-filter="asia">Asia</button>
+          <button class="filter-btn" data-filter="americas">Americas</button>
+        </div>
+
+        <!-- Destinations Grid -->
+        <div class="destinations-grid" id="destinations-grid">
+          <!-- Destinations will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather-section">
+      <div class="container">
+        <h2 class="section-title">Current Weather</h2>
+        <div class="weather-grid" id="weather-grid">
+          <!-- Weather cards will be loaded dynamically -->
+        </div>
+        <div class="weather-loading" id="weather-loading">
+          <div class="loading-spinner"></div>
+          <p>Loading weather data...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="slider-section">
+      <div class="container">
+        <h2 class="section-title">Featured Photos</h2>
+        <div class="slider-container">
+          <div class="slider" id="slider">
+            <div class="slide active">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop&q=80"
+                alt="Travel 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&fit=crop&q=80"
+                alt="Travel 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&fit=crop&q=80"
+                alt="Travel 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop&q=80"
+                alt="Travel 4"
+              />
+            </div>
+          </div>
+          <button class="slider-btn prev" id="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="slider-dots" id="slider-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>What documents do I need for international travel?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                You'll need a valid passport, visa (if required), and any
+                necessary travel documents. Always check the specific
+                requirements for your destination country.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>How far in advance should I book my trip?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                For international flights, it's recommended to book 3-6 months
+                in advance. Domestic trips can usually be booked 1-3 months
+                ahead.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>What's the best time to visit Europe?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                The best time is typically late spring (May-June) or early fall
+                (September-October) when crowds are smaller and weather is
+                pleasant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" required />
+              <button
+                type="button"
+                class="password-toggle"
+                id="password-toggle"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <span class="error-message" id="password-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

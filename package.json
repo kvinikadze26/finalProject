@@ -1,0 +1,22 @@
+{
+  "name": "wanderlust-travel-blog",
+  "version": "1.0.2",
+  "description": "A modern travel blog with all required features",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [
+    "travel",
+    "blog",
+    "responsive",
+    "javascript",
+    "css",
+    "html"
+  ],
+  "author": "itakli kvinikadze",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {}
+}
